@@ -1,0 +1,46 @@
+.rocket-button {
+  --rocket-glow: #ffd27eaa;
+  --rocket-trail: #f68b2733;
+  display: inline-flex;
+  width: 240px;
+  max-width: 100%;
+  vertical-align: middle;
+  border-radius: var(--radius);
+}
+.rocket-button-art {
+  position: relative;
+  display: block;
+  width: 100%;
+  isolation: isolate;
+  transition: scale 350ms ease;
+}
+.rocket-button-art img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.rocket-button-art .rocket-button-blackridge,
+.rocket-button-art::before {
+  content: "";
+  position: absolute;
+  inset: 34% 72% 30% -7%;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 84% 50%, var(--rocket-glow), var(--rocket-trail) 44%, transparent 74%);
+  opacity: .65;
+  transition: opacity 350ms ease, scale 350ms ease;
+  transform-origin: right center;
+}
+.rocket-button:is(:hover, :focus-visible) .rocket-button-art { scale: 1.04; }
+.rocket-button:is(:hover, :focus-visible) .rocket-button-art::before { opacity: 1; scale: 1.45 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .rocket-button-art { animation: rocket-float 4s ease-in-out infinite; }
+}
+@keyframes rocket-float {
+  50% { transform: translateY(-2px); }
+}
+@media (max-width: 1000px) { .rocket-button { width: 205px; } }
+@media (max-width: 660px) { .rocket-button { width: 165px; } }
+@media (prefers-reduced-motion: reduce) {
+  .rocket-button-art, .rocket-button-art::before { transition: none; }
+}

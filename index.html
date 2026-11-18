@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Александр Бычин — разработчик электронных курсов. Примеры учебных проектов, интерактивных презентаций и видеоинструкций.">
+  <meta name="theme-color" content="#08080a">
+  <title>Александр Бычин — разработчик электронных курсов</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/theme.css">
+  <link rel="stylesheet" href="assets/contact-options.css">
+  <script src="assets/motion.js" defer></script>
+  <link rel="stylesheet" href="assets/process-board.css">
+  <script src="assets/process-board.js" defer></script>
+  <script src="assets/format-preview.js" defer></script>
+  <script src="assets/cosmos.js" defer></script>
+  <link rel="preload" href="assets/fonts/cormorant-normal-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/slide-laptop.css">
+  <link rel="stylesheet" href="assets/home-hero.css">
+  <link rel="stylesheet" href="assets/display-theme.css">
+  <script src="assets/display-theme.js"></script>
+</head>
+<body class="portfolio-home">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <a class="skip" href="#main">К содержанию</a>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="index.html" aria-label="Александр Бычин, главная"><i class="brand-mark"><i class="brand-emblem"><img src="assets/icon.svg" width="34" height="34" alt=""></i></i><span>Александр Бычин</span></a>
+      <nav aria-label="Разделы сайта"><button class="display-theme-switch" type="button" aria-label="Светлая тема" aria-pressed="false" data-display-theme-toggle hidden><svg class="theme-sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M19 5l-1.5 1.5m-11 11L5 19"/></svg><svg class="theme-moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 13.4A9 9 0 0 1 10.6 3 9 9 0 1 0 21 13.4Z"/></svg></button><a href="#home">Главная</a><a href="#projects">Проекты</a><a href="#about">Обо мне</a><a class="nav-contact" href="#contact">Связаться</a></nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="home-hero shell" id="home" aria-labelledby="hero-title" data-cosmos-scene="0">
+      <div class="home-hero-orbit" aria-hidden="true"></div>
+      <div class="home-hero-copy">
+        <p class="home-hero-profile">
+          <span class="home-hero-avatar"><img class="avatar-gold" src="assets/media/alexander-bychin-avatar.png" alt="" width="1254" height="1254"><img class="avatar-daylight" src="assets/media/alexander-bychin-avatar-light.png" alt="" width="1254" height="1254"></span>
+          <span>Александр Бычин</span>
+        </p>
+        <h1 id="hero-title">Разработчик<br>электронных курсов</h1>
+        <p class="home-hero-description">Продуктовое обучение, продажи и клиентский сервис</p>
+        <dl class="home-hero-stats">
+          <div><dt><span class="home-hero-stat-number">7+</span> лет</dt><dd>в корпоративном обучении</dd></div>
+          <div><dt><span class="home-hero-stat-number">60+</span></dt><dd>разработанных курсов</dd></div>
+        </dl>
+        <a class="button home-hero-cta" href="#projects">Смотреть проекты</a>
+      </div>
+      <a class="home-hero-case" href="projects/business-writing/index.html" data-slide-transition>
+        <img src="assets/slides/business-writing/4.webp" alt="" width="1440" height="810" fetchpriority="high">
+        <div class="home-hero-caption">
+          <span>Деловая переписка</span>
+          <span class="home-hero-case-action">Смотреть проект <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </section>
+
+    <section class="shell projects" id="projects" aria-labelledby="projects-title" data-cosmos-scene="1">
+      <button class="cosmos-egg cosmos-egg-mood" type="button" aria-label="Узнать прогноз звезды" aria-haspopup="dialog" aria-controls="cosmos-mood" hidden></button>
+      <div class="section-heading">
+        <h2 class="section-title" id="projects-title">Проекты</h2>
+      </div>
+      <div class="project-toolbar">
+        <div class="project-filters" role="group" aria-label="Тип обучения" hidden>
+          <button class="button button-outline" type="button" data-project-filter="slides" aria-controls="project-grid" aria-pressed="false">Слайдовые курсы</button>
+          <button class="button button-outline" type="button" data-project-filter="interactive" aria-controls="project-grid" aria-pressed="false">Интерактивные курсы</button>
+          <button class="button button-outline" type="button" data-project-filter="dialogue" aria-controls="project-grid" aria-pressed="false">Диалоговые тренажёры</button>
+          <button class="button button-outline" type="button" data-project-filter="video" aria-controls="project-grid" aria-pressed="false">Видеообучение</button>
+          <button class="button button-outline" type="button" data-project-filter="product" aria-controls="project-grid" aria-pressed="false">Обучение продукту</button>
+        </div>
+        <div class="project-controls" hidden>
+          <button class="button button-outline" type="button" aria-controls="project-grid" aria-expanded="false" data-project-all>Смотреть все проекты</button>
+          <div class="project-arrows">
+            <button class="button button-outline" type="button" aria-controls="project-grid" aria-label="Предыдущий проект" data-project-previous><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M19 12H5m7 7-7-7 7-7"/></svg></button>
+            <button class="button button-outline" type="button" aria-controls="project-grid" aria-label="Следующий проект" data-project-next><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <p class="sr-only" role="status" data-project-status></p>
+      <p class="project-empty" data-project-empty hidden>Проекты в этой категории будут добавлены в ближайшее время</p>
+      <div class="project-grid" id="project-grid">
+        <article class="project orbit-frame" data-project-types="interactive">
+          <a href="projects/business-writing/index.html" class="project-link" data-slide-transition>
+            <div class="hero-work" aria-hidden="true">
+              <span class="hero-glow"></span>
+              <span class="hero-plate hero-plate-back"><img src="assets/slides/business-writing/2.webp" alt="" width="1440" height="810" loading="lazy"></span>
+              <span class="hero-plate hero-plate-front"><img src="assets/slides/business-writing/1.webp" alt="" width="1440" height="810" loading="lazy"></span>
+            </div>
+            <div class="project-copy">
+              <p class="project-format">Интерактивный курс</p>
+              <h3>Деловая переписка</h3>
+              <p>Как написать рабочее письмо, в котором понятны цель, ожидаемое действие и срок.</p>
+              <span class="text-link">Смотреть проект <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 18 18 6M8 6h10v10"/></svg></span>
+            </div>
+          </a>
+        </article>
+        <article class="project orbit-frame" data-project-types="slides video">
+          <a href="projects/customer-service/index.html" class="project-link" data-slide-transition>
+            <div class="hero-work" aria-hidden="true">
+              <span class="hero-glow"></span>
+              <span class="hero-plate hero-plate-back"><img src="assets/slides/customer-service/2.webp" alt="" width="1440" height="810" loading="lazy"></span>
+              <span class="hero-plate hero-plate-front"><img src="assets/slides/customer-service/1.webp" alt="" width="1440" height="810" loading="lazy"></span>
+            </div>
+            <div class="project-copy">
+              <p class="project-format">Слайдовый курс</p>
+              <h3>Клиенто&shy;ориентированность и сервис</h3>
+              <p>Как понять ожидания клиента и использовать инструменты сервиса в работе.</p>
+              <span class="text-link">Смотреть проект <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 18 18 6M8 6h10v10"/></svg></span>
+            </div>
+          </a>
+        </article>
+        <article class="project orbit-frame" data-project-types="slides video">
+          <a href="projects/consent-storage/index.html" class="project-link" data-slide-transition>
+            <div class="hero-work" aria-hidden="true">
+              <span class="hero-glow"></span>
+              <span class="hero-plate hero-plate-back"><img src="assets/slides/consent-storage/2.webp" alt="" width="1440" height="810" loading="lazy"></span>
+              <span class="hero-plate hero-plate-front"><img src="assets/slides/consent-storage/1.webp" alt="" width="1440" height="810" loading="lazy"></span>
+            </div>
+            <div class="project-copy">
+              <p class="project-format">Слайдовый курс + калькулятор штрафов</p>
+              <h3>Юридические аспекты коммуникации с клиентами</h3>
+              <p>Учебный материал о коммуникации с клиентами и работе с согласиями.</p>
+              <span class="text-link">Смотреть проект <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 18 18 6M8 6h10v10"/></svg></span>
+            </div>
+          </a>
+        </article>
+        <article class="project orbit-frame" data-project-types="video" data-project-video-featured>
+          <a href="projects/altyn/index.html" class="project-link" data-slide-transition>
+            <div class="hero-work" aria-hidden="true">
+              <span class="hero-glow"></span>
+              <span class="hero-plate hero-plate-front"><img src="assets/media/altyn-card.webp" alt="" width="960" height="540" loading="lazy"></span>
+            </div>
+            <div class="project-copy">
+              <p class="project-format">Видеообучение</p>
+              <h3>ALTYN</h3>
+              <p>Вертикальный проморолик о виртуальной карте ALTYN. Монтаж и моушн-дизайн.</p>
+              <span class="text-link">Смотреть проект <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 18 18 6M8 6h10v10"/></svg></span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="course-section shell" id="course-process" aria-labelledby="process-title" data-cosmos-scene="3">
+      <div class="course-heading">
+        <h2 class="section-title" id="process-title">Как я разрабатываю электронные курсы</h2>
+        <p>Полный цикл разработки курса — от обсуждения задачи и потребностей аудитории до запуска курса и доработок по обратной связи.</p>
+      </div>
+      <ol class="process-grid" id="process-stages" role="list">
+        <li class="process-card">
+          <img src="assets/media/course-sections/analysis-wide.webp" width="760" height="304" alt="" loading="lazy" decoding="async">
+          <div class="process-copy">
+            <span class="process-number" aria-label="Этап 1">01</span>
+            <h3>Анализ</h3>
+            <p>Уточняю задачу бизнеса, потребности аудитории и цели обучения.</p>
+          </div>
+        </li>
+        <li class="process-card">
+          <img src="assets/media/course-sections/design-wide.webp" width="760" height="304" alt="" loading="lazy" decoding="async">
+          <div class="process-copy">
+            <span class="process-number" aria-label="Этап 2">02</span>
+            <h3>Проектирование</h3>
+            <p>Выбираю формат, выстраиваю структуру курса и определяю критерии результата.</p>
+          </div>
+        </li>
+        <li class="process-card">
+          <img src="assets/media/course-sections/content-wide.webp" width="760" height="304" alt="" loading="lazy" decoding="async">
+          <div class="process-copy">
+            <span class="process-number" aria-label="Этап 3">03</span>
+            <h3>Разработка контента</h3>
+            <p>Пишу сценарии и тексты, подбираю визуальные материалы, разрабатываю задания и тесты.</p>
+          </div>
+        </li>
+        <li class="process-card">
+          <img src="assets/media/course-sections/build-wide.webp" width="760" height="304" alt="" loading="lazy" decoding="async">
+          <div class="process-copy">
+            <span class="process-number" aria-label="Этап 4">04</span>
+            <h3>Сборка курса</h3>
+            <p>Собираю курс в iSpring и настраиваю навигацию, задания и обратную связь.</p>
+          </div>
+        </li>
+        <li class="process-card">
+          <img src="assets/media/course-sections/launch-wide.webp" width="760" height="304" alt="" loading="lazy" decoding="async">
+          <div class="process-copy">
+            <span class="process-number" aria-label="Этап 5">05</span>
+            <h3>Тестирование и запуск</h3>
+            <p>Проверяю прохождение курса, исправляю ошибки и готовлю материалы к запуску.</p>
+          </div>
+        </li>
+        <li class="process-card">
+          <img src="assets/media/course-sections/feedback-wide.webp" width="760" height="304" alt="" loading="lazy" decoding="async">
+          <div class="process-copy">
+            <span class="process-number" aria-label="Этап 6">06</span>
+            <h3>Обратная связь и развитие</h3>
+            <p>Собираю отзывы и уточняю, какие материалы или задания стоит улучшить.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="course-section shell" id="course-formats" aria-labelledby="formats-title" data-cosmos-scene="2">
+      <div class="course-heading">
+        <h2 class="section-title" id="formats-title">Какие курсы я разрабатываю</h2>
+        <p>Подбираю формат под задачу обучения и условия, в которых сотрудники будут применять знания.</p>
+      </div>
+      <div class="format-grid format-catalog orbit-frame">
+        <article class="format-card">
+          <div class="slide-laptop slide-laptop-dialogue"><div class="slide-laptop-art"><img src="assets/media/course-sections/dialogue-front.webp" width="1199" height="675" alt="" loading="lazy" decoding="async"><div class="slide-laptop-screen" aria-hidden="true"><img src="assets/media/course-sections/dialogue-demo-1-screen.webp" alt=""><img src="assets/media/course-sections/dialogue-demo-2-screen.webp" alt=""><img src="assets/media/course-sections/dialogue-demo-3-screen.webp" alt=""></div></div></div>
+          <div>
+            <h3>Диалоговые тренажёры</h3>
+            <p>Практика общения с клиентами и коллегами. Участник выбирает реплики и видит, как его ответы меняют ход разговора.</p>
+            <p class="format-use">Для отработки общения и работы с возражениями.</p>
+          </div>
+        </article>
+        <article class="format-card">
+          <div class="slide-laptop"><div class="slide-laptop-art"><img src="assets/media/course-sections/slides-front.webp" width="1199" height="675" alt="" loading="lazy" decoding="async"><div class="slide-laptop-screen" aria-hidden="true"><img src="assets/media/course-sections/slide-demo-1-screen.webp" alt=""><img src="assets/media/course-sections/slide-demo-2-screen.webp" alt=""><img src="assets/media/course-sections/slide-demo-3-screen.webp" alt=""></div></div></div>
+          <div>
+            <h3>Слайдовые курсы</h3>
+            <p>Материал разбит на короткие экраны с иллюстрациями, схемами и заданиями.</p>
+            <p class="format-use">Для последовательного знакомства с темой.</p>
+          </div>
+        </article>
+        <article class="format-card">
+          <div class="slide-laptop"><div class="slide-laptop-art"><img src="assets/media/course-sections/longread-front.webp" width="1199" height="675" alt="" loading="lazy" decoding="async"><div class="slide-laptop-screen format-screen-article" aria-hidden="true"><div class="format-screen-article-body"><section><strong>Как давать обратную связь</strong><img class="learning-illustration" src="assets/media/course-sections/feedback-lesson.webp" width="640" height="360" alt="">Сначала назовите конкретную ситуацию и опишите, что произошло.</section><ol class="article-infographic" aria-label="Три шага обратной связи"><li><span>01</span>Ситуация</li><li><span>02</span>Последствия</li><li><span>03</span>Следующий шаг</li></ol><section><strong>Объясните последствия</strong>Покажите, как действие повлияло на команду или результат. Избегайте оценок личности.</section><section><strong>Договоритесь о следующем шаге</strong>Спросите коллегу, что поможет ему действовать иначе в похожей ситуации.</section></div></div></div></div>
+          <div>
+            <h3>Лонгриды</h3>
+            <p>Подробные материалы с примерами, схемами и пояснениями. К ним удобно возвращаться во время работы.</p>
+            <p class="format-use">Для разбора сложной темы в своём темпе.</p>
+          </div>
+        </article>
+        <article class="format-card">
+          <div class="slide-laptop"><div class="slide-laptop-art"><img src="assets/media/course-sections/video-front.webp" width="1199" height="675" alt="" loading="lazy" decoding="async"><div class="slide-laptop-screen format-screen-video-wrap" aria-hidden="true"><video class="format-screen-video" data-preview-video="assets/media/course-sections/screwdriver-lesson.mp4" poster="assets/media/course-sections/screwdriver-poster.webp" muted loop playsinline preload="none"></video></div></div></div>
+          <div>
+            <h3>Видеокурсы</h3>
+            <p>Инструкции и демонстрации, в которых можно увидеть процесс шаг за шагом.</p>
+            <p class="format-use">Для показа действий, которые трудно объяснить текстом.</p>
+          </div>
+        </article>
+        <article class="format-card">
+          <div class="slide-laptop"><div class="slide-laptop-art"><img src="assets/media/course-sections/scenario-front.webp" width="1199" height="675" alt="" loading="lazy" decoding="async"><div class="slide-laptop-screen format-screen-scenario" aria-hidden="true"><div class="format-scenario-step"><img class="learning-illustration" src="assets/media/course-sections/scenario-lesson.webp" width="640" height="360" alt=""><span>01 / 03</span><strong>Клиент просит скидку</strong><span>Сначала выясните, что мешает согласовать предложение.</span></div><div class="format-scenario-step"><img class="learning-illustration" src="assets/media/course-sections/scenario-lesson.webp" width="640" height="360" alt=""><span>02 / 03</span><strong>Причина оказалась в сроках</strong><span>Уточните, когда клиенту нужен результат.</span></div><div class="format-scenario-step"><img class="learning-illustration" src="assets/media/course-sections/scenario-lesson.webp" width="640" height="360" alt=""><span>03 / 03</span><strong>Новый план согласован</strong><span>Предложите поэтапную поставку и проверьте, подходит ли она клиенту.</span></div></div></div></div>
+          <div>
+            <h3>Интерактивные сценарии</h3>
+            <p>Участник принимает решения в рабочей ситуации и видит последствия каждого выбора.</p>
+            <p class="format-use">Для практики в ситуациях с несколькими вариантами действий.</p>
+          </div>
+        </article>
+        <article class="format-card">
+          <div class="micro-phone" aria-hidden="true">
+            <img class="micro-phone-background" src="assets/media/course-sections/microlearning-desk.webp" width="960" height="540" alt="" loading="lazy">
+            <span class="micro-phone-device"><span class="micro-phone-portrait"><img class="phone-screen-art" src="assets/media/course-sections/microlearning-screen-portrait.webp" alt=""></span><span class="micro-phone-landscape"><img class="phone-screen-art" src="assets/media/course-sections/microlearning-woman.webp" alt=""><span class="phone-screen-copy"><span class="phone-lesson-kicker">Урок 1 из 1</span><strong>Как распознать фишинг</strong><span>Проверьте адрес отправителя</span></span></span></span>
+          </div>
+          <div>
+            <h3>Микрокурсы</h3>
+            <p>Короткий урок раскрывает одну тему и помогает сразу применить материал на практике.</p>
+            <p class="format-use">Для быстрого знакомства с темой или повторения перед рабочей задачей.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about shell" id="about" aria-labelledby="about-title" data-cosmos-scene="4">
+      <div class="about-copy">
+        <h2 class="section-title" id="about-title">Обо мне</h2>
+        <p>Я — <strong>Александр Бычин, разработчик электронных курсов</strong> с опытом более 7 лет.</p>
+        <p>Помогаю компаниям превращать сложную информацию, рабочие процессы и реальные бизнес-задачи в понятные, современные и интерактивные обучающие продукты.</p>
+        <p>Мой подход объединяет методологию обучения, визуальный дизайн и технологии. Я не просто переношу информацию в электронный формат — выстраиваю обучение так, чтобы сотрудники могли применять полученные знания в работе.</p>
+        <p>Разрабатываю электронные курсы полного цикла: от анализа целевой аудитории и проектирования сценария до создания интерактивов, внедрения в LMS и оценки результатов.</p>
+      </div>
+      <section class="about-experience" aria-labelledby="about-experience-title">
+        <h3 id="about-experience-title">Опыт в цифрах</h3>
+        <div class="about-stats">
+          <details class="about-stat">
+            <summary><strong>7+</strong><span>лет в корпоративном обучении</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <div class="about-stat-content" role="region" aria-label="Опыт в корпоративном обучении" tabindex="0">
+              <p><b>Задачи:</b> адаптация сотрудников, продуктовое обучение, администрирование СДО и отчётность.</p>
+              <p><b>Цифры:</b> 7+ лет в корпоративном обучении; 1 000+ пользователей СДО во «ВсеИнструменты.ру».</p>
+              <p><b>Результат:</b> автоматизировал отчётность, чтобы руководители могли отслеживать прогресс по подразделениям и видеть, где сотрудники ещё не прошли обучение.</p>
+            </div>
+          </details>
+          <details class="about-stat">
+            <summary><strong>60+</strong><span>электронных курсов</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <div class="about-stat-content" role="region" aria-label="Опыт разработки курсов" tabindex="0">
+              <p><b>Задачи:</b> разработка курсов полного цикла по ассортименту, продажам, сервису и рабочим процессам.</p>
+              <p><b>Цифры:</b> 60+ курсов, из них 40+ — во «ВсеИнструменты.ру»; там их проходили 600+ сотрудников в квартал.</p>
+              <p><b>Результат:</b> сотрудники разных подразделений могли изучать ассортимент и рабочие процессы по единым материалам в удобное время. Компания могла обучать сотни сотрудников без повторного проведения одного и того же занятия.</p>
+            </div>
+          </details>
+          <details class="about-stat">
+            <summary><strong>400+</strong><span>очно обученных сотрудников</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <div class="about-stat-content" role="region" aria-label="Сотрудники, обученные очно" tabindex="0">
+              <p>Лично обучил более 400 сотрудников в трёх проектах:</p>
+              <ul>
+                <li><b>«Аэрофлот»</b> — 300+ сотрудников.</li>
+                <li><b>Adidas/Reebok</b> — 50+ сотрудников.</li>
+                <li><b>Dyson</b> — 50+ сотрудников.</li>
+              </ul>
+            </div>
+          </details>
+          <details class="about-stat">
+            <summary><strong>4</strong><span>крупных корпоративных проекта</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <div class="about-stat-content" role="region" aria-label="Корпоративные проекты" tabindex="0">
+              <h4>«Аэрофлот» (2018–2020)</h4>
+              <p><b>Роль:</b> обучал сотрудников контактного центра, дорабатывал программу обучения и алгоритмы в базе знаний.</p>
+              <p><b>Результат:</b> сократил время подготовки сотрудников благодаря обновлённой программе.</p>
+              <h4>Adidas/Reebok (2020–2021)</h4>
+              <p><b>Роль:</b> разработал подход к наставничеству и подготовил наставников.</p>
+              <p><b>Результат:</b> запустил систему наставничества: у команды появились подготовленные сотрудники, которые могли сопровождать новичков на рабочем месте.</p>
+              <h4>Dyson (2021–2022)</h4>
+              <p><b>Роль:</b> отвечал за обучение в рамках запуска новой площадки контактного центра. Адаптировал программу под внутренние системы, диагностику и обслуживание техники.</p>
+              <p><b>Результат:</b> к запуску площадки помог подготовить команду к работе с техническими обращениями клиентов, в том числе по видеосвязи.</p>
+              <h4>«ВсеИнструменты.ру» (2023–2026)</h4>
+              <p><b>Роль:</b> организовал продуктовое обучение для розничных и корпоративных продаж, наладил календарь и автоматизировал отчётность.</p>
+              <p><b>Результат:</b> продуктовое обучение охватывало <b>1 000+ уникальных сотрудников в квартал</b>, а показатель обученности вырос <b>с 60% до 90%</b>. Руководители могли отслеживать прогресс по подразделениям.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section class="about-tools" aria-labelledby="about-tools-title">
+        <h3 id="about-tools-title">Инструменты и технологии</h3>
+        <div class="about-tools-grid">
+          <article class="about-tool">
+            <h4>Сборка электронных курсов</h4>
+            <p class="about-tool-stack">iSpring Suite / Suite Max, PowerPoint.</p>
+            <p>Сборка слайдовых курсов, настройка навигации, создание интерактивных заданий и тестов.</p>
+          </article>
+          <article class="about-tool">
+            <h4>Публикация и проверка курсов</h4>
+            <p class="about-tool-stack">iSpring Learn, SCORM.</p>
+            <p>Экспорт SCORM-пакетов, загрузка в СДО, проверка прохождения и передачи результатов.</p>
+          </article>
+          <article class="about-tool">
+            <h4>Визуал и интерфейс</h4>
+            <p class="about-tool-stack">Figma, PowerPoint.</p>
+            <p>Проектирование экранов курса, создание шаблонов, схем и инфографики.</p>
+          </article>
+          <article class="about-tool">
+            <h4>Видео и аудио</h4>
+            <p class="about-tool-stack">Adobe Premiere Pro, CapCut.</p>
+            <p>Монтаж видеоуроков и демонстраций, работа с аудиодорожками и субтитрами.</p>
+          </article>
+          <article class="about-tool">
+            <h4>Аналитика обучения</h4>
+            <p class="about-tool-stack">Excel, Google Sheets, отчёты СДО.</p>
+            <p>Анализ прохождения и результатов тестов, подготовка отчётов по сотрудникам и подразделениям.</p>
+          </article>
+          <article class="about-tool">
+            <h4>ИИ в разработке</h4>
+            <p class="about-tool-stack">ChatGPT, Codex, Gemini, Qwen, ElevenLabs.</p>
+            <ul>
+              <li>ChatGPT, Gemini и Qwen — подготовка текстов и сценариев.</li>
+              <li>Codex — разработка сайтов, приложений и интерактивных тренажёров, автоматизация рабочих процессов.</li>
+              <li>ElevenLabs — озвучка учебных материалов.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title" data-cosmos-scene="5">
+      <button class="cosmos-egg" type="button" aria-label="Исследовать сияющую звезду" aria-haspopup="dialog" aria-controls="cosmos-promo" hidden></button>
+      <div class="shell contact-inner">
+        <div class="contact-heading">
+          <h2 class="section-title" id="contact-title">Поднять курсы на космический уровень!</h2>
+          <p>Выберите удобный способ связи или заполните мини-бриф.</p>
+        </div>
+        <div class="contact-options orbit-frame">
+          <a class="contact-card" href="https://t.me/ABychin" target="_blank" rel="noopener noreferrer"><span class="contact-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 3 2 11l7 3 3 7 10-18ZM9 14l7-6m-4 13 3-6"/></svg></span><span class="contact-label"><strong>Telegram</strong><span>Быстрое обсуждение</span></span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
+          <a class="contact-card" data-contact-max href="https://max.ru/u/f9LHodD0cOLuGm_WnyVyZsIbVn91XkVgvxrNP0IjXGed53pwPBDi2vliBWc" target="_blank" rel="noopener noreferrer"><span class="contact-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H5l1.5-4a7.5 7.5 0 1 1 13.5-3.5Z"/></svg></span><span class="contact-label"><strong>MAX</strong><span>Альтернативный мессенджер</span></span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
+          <a class="contact-card" href="mailto:i@apbychin.ru"><span class="contact-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v14H3z M3 6l9 7 9-7"/></svg></span><span class="contact-label"><strong>Почта: i@apbychin.ru</strong><span>Для подробных запросов</span></span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
+          <button class="contact-card" type="button" aria-haspopup="dialog" aria-controls="contact-brief"><span class="contact-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 5H5v16h14V5h-4 M9 3h6v4H9z M8 12l1 1 2-2m2 1h3m-8 5 1 1 2-2m2 1h3"/></svg></span><span class="contact-label"><strong>Мини-бриф для заказчика</strong><span>Несколько вопросов о проекте</span></span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </section>
+  </main>
+    <dialog class="cosmos-promo contact-brief" id="contact-brief" aria-labelledby="contact-brief-title">
+    <div class="quiz-heading">
+      <h2 id="contact-brief-title" tabindex="-1" autofocus>Мини-бриф для заказчика</h2>
+      <form method="dialog"><button class="button button-outline">Закрыть</button></form>
+    </div>
+    <form class="quiz-form">
+      <fieldset class="quiz-contacts">
+        <legend>Контакты</legend>
+        <label>Имя <input name="name" pattern="[^\p{Nd}]+" autocomplete="name" required maxlength="80"></label>
+        <label>Должность <input name="position" pattern="[^\p{Nd}]+" autocomplete="organization-title" required maxlength="100"></label>
+        <label>Компания <input name="company" autocomplete="organization" required maxlength="120"></label>
+      </fieldset>
+      <div class="quiz-questions"></div>
+      <label class="quiz-comment">Комментарий (необязательно)
+        <textarea name="comment" rows="4" maxlength="500"></textarea>
+      </label>
+      <fieldset class="quiz-send">
+        <legend>Отправить запрос</legend>
+        <div class="quiz-send-options">
+          <button class="button button-light" type="submit" name="channel" value="Telegram"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 3 2 11l7 3 3 7 10-18ZM9 14l7-6m-4 13 3-6"/></svg>Telegram</button>
+          <button class="button button-light" type="submit" name="channel" value="MAX"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H5l1.5-4a7.5 7.5 0 1 1 13.5-3.5Z"/></svg>MAX</button>
+          <button class="button button-light" type="submit" name="channel" value="Почта"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v14H3z M3 6l9 7 9-7"/></svg>Почта</button>
+        </div>
+      </fieldset>
+    </form>
+    <div class="quiz-result" hidden>
+      <label>Готовый мини-бриф <textarea readonly rows="6"></textarea></label>
+      <p data-max-note hidden>Скопируйте текст мини-брифа и вставьте его в чат MAX.</p>
+      <a class="button button-light" href="#">Открыть черновик</a>
+    </div>
+    <form class="cosmos-promo-actions quiz-close" method="dialog">
+      <button class="button button-outline">Закрыть</button>
+    </form>
+  </dialog>
+  <script src="assets/contact-quiz.js"></script>
+  <dialog class="cosmos-promo" id="cosmos-mood" aria-labelledby="cosmos-mood-title">
+    <h2 id="cosmos-mood-title">Прогноз от звезды</h2>
+    <p>Звезда передаёт с орбиты: сегодня у вас будет превосходное настроение!</p>
+    <div class="cosmos-promo-actions">
+      <form method="dialog"><button class="button button-outline" autofocus>Закрыть</button></form>
+    </div>
+  </dialog>
+  <dialog class="cosmos-promo" id="cosmos-promo" aria-labelledby="cosmos-promo-title">
+    <h2 id="cosmos-promo-title">Вы нашли пасхалку!</h2>
+    <p>Промокод <strong>«Космос87»</strong> даёт скидку <strong>10% на разработку электронного курса</strong>. Чтобы получить скидку, напишите мне в Telegram и укажите промокод.</p>
+    <div class="cosmos-promo-actions">
+      <a class="button button-light" href="https://t.me/ABychin?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80!%20%D0%AF%20%D0%BD%D0%B0%D1%88%D1%91%D0%BB%20%D0%BF%D0%B0%D1%81%D1%85%D0%B0%D0%BB%D0%BA%D1%83%20%D0%BD%D0%B0%20%D0%B2%D0%B0%D1%88%D0%B5%D0%BC%20%D1%81%D0%B0%D0%B9%D1%82%D0%B5%20%D0%B8%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9%20%D0%BA%D1%83%D1%80%D1%81%20%D1%81%D0%BE%20%D1%81%D0%BA%D0%B8%D0%B4%D0%BA%D0%BE%D0%B9%2010%25%20%D0%BF%D0%BE%20%D0%BF%D1%80%D0%BE%D0%BC%D0%BE%D0%BA%D0%BE%D0%B4%D1%83%20%C2%AB%D0%9A%D0%BE%D1%81%D0%BC%D0%BE%D1%8187%C2%BB." target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+      <form method="dialog"><button class="button button-outline" autofocus>Закрыть</button></form>
+    </div>
+  </dialog>
+  <footer class="site-footer"><div class="shell footer-inner"><span>© 2026 Александр Бычин</span><a href="#main">К началу страницы <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 19V5m-6 6 6-6 6 6"/></svg></a></div></footer>
+</body>
+</html>

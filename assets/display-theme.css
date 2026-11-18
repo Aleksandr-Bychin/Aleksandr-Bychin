@@ -1,0 +1,109 @@
+.display-theme-switch {
+  display:inline-grid;
+  place-items:center;
+  flex:none;
+  inline-size:42px;
+  block-size:44px;
+  padding:0;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  color:var(--accent);
+  background:var(--panel);
+  cursor:pointer;
+}
+.display-theme-switch:hover { border-color:var(--accent); }
+.display-theme-switch svg { width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round; }
+.display-theme-switch .theme-moon-icon,
+[data-theme="daylight"] .display-theme-switch .theme-sun-icon { display:none; }
+[data-theme="daylight"] .display-theme-switch .theme-moon-icon { display:block; }
+:root[data-theme="daylight"] {
+  color-scheme:light;
+  --radius:24px;
+  --bg:#faf7f0;
+  --panel:#fffdf8;
+  --ink:#261e17;
+  --muted:#5f5143;
+  --quiet:#776454;
+  --accent:#82501e;
+  --line:#dac8b1;
+  --portfolio-gold:#82501e;
+  --outline-hover:#f0e5d5;
+  --gold-highlight:#966733;
+  --gold-highlight-bg:#f3e8d7;
+}
+[data-theme="daylight"] :is(#cosmos,.home-hero-orbit,.cosmos-egg,.hero-glow) { display:none; }
+[data-theme="daylight"] :is(.project,.format-card,.process-card,.orbit-frame,.contact,.portfolio-home.cosmos-ready .contact) {
+  background:var(--panel);
+}
+[data-theme="daylight"] .orbit-frame {
+  --frame-edge:#bea480;
+  --frame-inner:var(--line);
+  box-shadow:none;
+}
+[data-theme="daylight"] .orbit-frame::before,
+[data-theme="daylight"] .orbit-frame::after { content:none; }
+[data-theme="daylight"] .home-hero {
+  --hero-edge:#b88c59;
+  --folder-accent:#b88c59;
+}
+:root[data-theme="daylight"] .home-hero .home-hero-cta { background:#ead2a9;color:var(--ink); }
+:root[data-theme="daylight"] .home-hero .home-hero-cta:hover { background:#ddbc86; }
+[data-theme="daylight"] .home-hero-case,
+[data-theme="daylight"] .home-hero-case::before { background:#e5d2b8; }
+[data-theme="daylight"] .home-hero-case::after {
+  background:linear-gradient(145deg,#f2e5d3e8,#dfc8a8f5);
+}
+[data-theme="daylight"] .button-light { background:var(--accent);color:#fff; }
+[data-theme="daylight"] .button-light:hover { background:#613917; }
+[data-theme="daylight"] .button-outline:hover { background:var(--outline-hover); }
+[data-theme="daylight"] :is(.process-controls,.project-controls,.project-filters) .button { text-shadow:none; }
+[data-theme="daylight"] :is(.viewer-controls button,.viewer-controls select) { background:var(--panel);color:var(--ink); }
+[data-theme="daylight"] .viewer-controls button:hover:not(:disabled) { background:var(--outline-hover); }
+[data-theme="daylight"] .quiz-field-error:not(:empty) { color:#9b2435; }
+[data-theme="daylight"] .quiz-form input[aria-invalid="true"] { border-color:#9b2435; }
+
+:root:not([data-theme="daylight"]) .home-hero-avatar {
+  border-radius:var(--radius);
+}
+[data-theme="daylight"] :is(.button,.nav-contact,.display-theme-switch,.viewer-controls button,.viewer-controls select) {
+  --radius:999px;
+  border-radius:999px;
+}
+[data-theme="daylight"] :is(.orbit-frame,.contact-card,.cosmos-promo) {
+  border-radius:var(--radius);
+}
+
+.home-hero-avatar .avatar-daylight { display:none; }
+[data-theme="daylight"] .home-hero-avatar .avatar-gold { display:none; }
+[data-theme="daylight"] .home-hero-avatar .avatar-daylight { display:block; }
+:root[data-theme="daylight"] .home-hero-avatar {
+  border-color:transparent;
+  background:#eee7da;
+}
+:root[data-theme="daylight"] .brand-emblem img {
+  content:url("icon-daylight.svg");
+  border-radius:50%;
+  border:0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  :root[data-theme="daylight"] .brand-emblem::before {
+    background-image:url("icon-daylight.svg");
+    border-radius:50%;
+    box-shadow:none;
+  }
+  :root[data-theme="daylight"] .brand-emblem::after {
+    left:80.08%;
+    top:23.34%;
+    background:#b66d27;
+  }
+}
+:root[data-theme="daylight"] .contact-card {
+  --radius:44px;
+  border-radius:var(--radius);
+}
+@media (max-width:420px) {
+  .topbar nav { gap:clamp(4px,1.7vw,8px);font-size:11px; }
+  .topbar .nav-contact { padding-inline:6px; }
+  .display-theme-switch { inline-size:34px; }
+  .display-theme-switch svg { width:17px;height:17px; }
+}

@@ -1,0 +1,141 @@
+.contact .contact-inner {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(20px, 3vw, 40px);
+}
+.contact :where(#contact-title) {
+  font-size: clamp(32px, 5.4vw, 66px);
+  text-align: left;
+  text-wrap: balance;
+}
+.contact .contact-heading p {
+  margin: 12px 0 0;
+  font-size: clamp(15px, 2vw, 20px);
+}
+.contact-options.orbit-frame {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  max-width: 575px;
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.contact-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(9px, 2vw, 22px);
+  width: 100%;
+  min-height: 84px;
+  padding: 12px clamp(10px, 2vw, 22px);
+  border: 1px solid var(--frame-inner);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--panel) 76%, transparent);
+  color: var(--ink);
+  text-decoration: none;
+  text-align: left;
+  transition: border-color .2s, box-shadow .2s;
+}
+.contact-label {
+  display: grid;
+  gap: 4px;
+  padding-inline-start: clamp(9px, 2vw, 22px);
+  border-inline-start: 1px solid var(--frame-inner);
+  overflow-wrap: anywhere;
+}
+:root:not([data-theme="blackridge"]) .contact-card {
+  border-radius: var(--radius);
+}
+.contact-label strong {
+  font: 600 clamp(18px, 3vw, 32px)/1.05 var(--display);
+}
+
+
+.contact-label > span { color: var(--muted); font-size: 13px; line-height: 1.35; }
+.contact-icon {
+  display: grid;
+  place-items: center;
+  width: clamp(32px, 5vw, 48px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--accent);
+}
+.contact-icon svg { width: 22px; height: 22px; }
+.contact-card > svg { color: var(--accent); }
+.contact-card[aria-disabled="true"] > svg { visibility: hidden; }
+@media (hover: hover) {
+  .contact-card:not([aria-disabled="true"]):hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 16px color-mix(in srgb, var(--accent) 35%, transparent);
+  }
+}
+.contact-options.orbit-frame::before,
+.contact-options.orbit-frame::after { content: none; }
+.contact-options.orbit-frame { box-shadow: none; }
+.cosmos-promo.contact-brief { width: min(720px, calc(100% - 24px)); }
+.quiz-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; justify-content: space-between; }
+.quiz-heading form { margin-inline-start: auto; }
+.cosmos-promo-actions.quiz-close { justify-content: flex-end; }
+.quiz-send-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.quiz-send-options .button { flex: 1 0 auto; }
+.quiz-send-options svg { width: 20px; height: 20px; }
+@media (hover: hover) {
+}
+.quiz-questions h3 { margin: 24px 0 12px; font-size: 28px; }
+.quiz-form fieldset {
+  min-inline-size: 0;
+  margin: 0 0 18px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.quiz-form legend { padding: 0 5px; font-weight: 750; }
+.quiz-form fieldset > p { margin: 0 0 8px; font-size: 13px; color: var(--muted); }
+.quiz-choice { display: flex; align-items: flex-start; padding: 8px 0; gap: 10px; cursor: pointer; }
+.quiz-choice input { flex: none; margin-top: .4em; accent-color: var(--accent); }
+.quiz-choice:has(input:disabled) { opacity: .65; cursor: default; }
+.quiz-dropdown {
+  border: 1px solid var(--quiet);
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+.quiz-dropdown summary {
+  min-height: 44px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+.quiz-dropdown summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.quiz-dropdown-options { padding: 4px 12px; border-top: 1px solid var(--line); }
+.quiz-contacts, .quiz-custom { display: grid; gap: 10px; }
+.quiz-custom { margin-top: 8px; }
+.quiz-form :is(input[type="text"], input:not([type]), select, textarea), .quiz-result textarea {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  margin-top: 4px;
+  padding: 8px;
+  border: 1px solid var(--quiet);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+}
+.quiz-comment { display: block; margin-bottom: 18px; }
+.quiz-field-error:not(:empty) {
+  display: block;
+  margin-top: 4px;
+  color: #ffb7b7;
+  font-size: 13px;
+}
+.quiz-form input[aria-invalid="true"] { border-color: #ffb7b7; }
+.quiz-result { margin-top: 20px; }
+.quiz-result .button { margin-top: 12px; }
+@media (prefers-reduced-motion: reduce) {
+  .contact-card { transition: none; }
+}

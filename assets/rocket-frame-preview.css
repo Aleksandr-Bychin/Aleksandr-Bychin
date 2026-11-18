@@ -1,0 +1,28 @@
+.hero.rocket-frame-preview {
+  --frame-edge: #edc478;
+  --rocket-rail-height: clamp(42px, 6.2vw, 88px);
+  --rocket-rail-width: clamp(58px, 9vw, 124px);
+  border: 0;
+  border-radius: 30px;
+  padding-block: var(--rocket-rail-height);
+  background: radial-gradient(ellipse at 90% 100%, #3a2514, transparent 52%), #111114;
+  box-shadow: 0 18px 50px #0009;
+}
+
+.hero.rocket-frame-preview::before {
+  z-index: 1;
+  inset: 0;
+  border: solid transparent;
+  border-width: var(--rocket-rail-height) var(--rocket-rail-width);
+  border-image: url("media/rocket-frame-preview.webp") 230 320 stretch;
+  background: none;
+}
+
+.hero.rocket-frame-preview::after {
+  content: none;
+}
+
+.hero.rocket-frame-preview .hero-portrait {
+  border-color: var(--frame-edge);
+  box-shadow: 0 0 0 3px #0d0d10, 0 0 0 4px #f0e4cc70, 0 12px 36px #0006;
+}
